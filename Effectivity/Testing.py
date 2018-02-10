@@ -1,6 +1,12 @@
 import unittest
 
 
+class DisplayJudger(object):
+
+    def is_show(self,seq,range):
+        return True
+
+
 class FTOfJudger(unittest.TestCase):
 
     def test_001_step_show_judgemnet_by_range_any(self):
