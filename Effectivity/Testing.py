@@ -1,6 +1,16 @@
 import unittest
 from DispJudger import DispJudger
 
+class ATOfJudger(unittest.TestCase):
+    def test_at_of_show_judgement_by_multi_range(self):
+        """
+         GIVEN : multi seq of effect range : range(1,99),range(110-220)
+         WHEN  : input airplane seq not in effect range : 101
+         THEN  : return judge result False
+        """
+        self.assertFalse(DispJudger().is_show(101, [range(1, 100), range(110, 220)]))
+
+
 
 class FTOfJudger(unittest.TestCase):
     def setUp(self):
