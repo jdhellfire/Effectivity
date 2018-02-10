@@ -5,8 +5,7 @@ class DispJudger(object):
 
         for chk_elemt in effect_range:
 
-            if not isinstance(chk_elemt, range):
-                chk_elemt = [chk_elemt]
+            chk_elemt = chk_elemt if isinstance(chk_elemt, range) else [chk_elemt]
 
             if seq in chk_elemt:
                 return True
