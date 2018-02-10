@@ -68,7 +68,7 @@ class FTOfJudger(unittest.TestCase):
         WHEN  : input airplane seq in effect range : 201
         THEN  : return judge result True
         """
-        self.assertFalse(self.judger.is_show(201, [range(1, 101), range(200, 301)]))
+        self.assertTrue(self.judger.is_show(201, [range(1, 101), range(200, 301)]))
 
 
 if __name__ == '__main__':
