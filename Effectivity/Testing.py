@@ -2,9 +2,7 @@ import unittest
 from DispJudger import DispJudger
 
 
-
 class FTOfJudger(unittest.TestCase):
-
     def setUp(self):
         self.judger = DispJudger()
 
@@ -14,7 +12,7 @@ class FTOfJudger(unittest.TestCase):
         WHEN  : input any airplane seq
         THEN  : return judge result true
         """
-        self.assertTrue(self.judger.is_show(1,'ANY'))
+        self.assertTrue(self.judger.is_show(1, 'ANY'))
 
     def test_002_step_show_judgement_by_single_seq(self):
         """
@@ -22,7 +20,7 @@ class FTOfJudger(unittest.TestCase):
         WHEN  : input airplane seq equal effect range : 1
         THEN  : return judge result true
         """
-        self.assertTrue(self.judger.is_show(1,1))
+        self.assertTrue(self.judger.is_show(1, 1))
 
     def test_003_set_show_judgement_by_single_seq(self):
         """
@@ -30,7 +28,8 @@ class FTOfJudger(unittest.TestCase):
         WHEN  : input airplane seq not equal effect range : 2
         THEN  : return judge result true
         """
-        self.assertTrue(self.judger.is_show(2,1))
+        self.assertFalse(self.judger.is_show(2, 1))
+
 
 if __name__ == '__main__':
     unittest.main()
