@@ -3,9 +3,6 @@ class DispJudger(object):
         if range == 'ANY':
             return True
 
-        if seq == range:
-            return True
-
         if seq in range:
             return True
 
