@@ -28,7 +28,7 @@ class FTOfJudger(unittest.TestCase):
         WHEN  : input airplane seq not equal effect range : 2
         THEN  : return judge result false
         """
-        self.assertFalse(self.judger.is_show(2, 1))
+        self.assertFalse(self.judger.is_show(2, [1]))
 
     def test_004_step_show_judgement_by_multi_seq(self):
         """
