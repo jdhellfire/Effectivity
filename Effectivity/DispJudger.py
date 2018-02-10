@@ -1,15 +1,14 @@
 class DispJudger(object):
-    def is_show(self, seq, eff_range):
-        if eff_range == 'ANY':
+    def is_show(self, seq, effect_range):
+        if effect_range == 'ANY':
             return True
 
-        for chk in eff_range:
+        for chk_elemt in effect_range:
 
-            if isinstance(chk, range):
-                if seq in chk:
-                    return True
+            if not isinstance(chk_elemt, range):
+                chk_elemt = [chk_elemt]
 
-            if seq == chk:
+            if seq in chk_elemt:
                 return True
 
         return False
