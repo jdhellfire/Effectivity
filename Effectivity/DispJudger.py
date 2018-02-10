@@ -6,4 +6,5 @@ class DispJudger(object):
         if seq in range:
             return True
 
+
         return False
