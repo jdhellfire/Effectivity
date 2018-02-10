@@ -1,11 +1,13 @@
+from functools import reduce
+
+
 class DispJudger(object):
-    def is_show(self, seq, effect_range):
-        if effect_range == 'ANY':
+    def is_show(self, seq, effect_elemts):
+        if effect_elemts == 'ANY':
             return True
 
-        for chk_elemt in effect_range:
+        ret = reduce(lambda x, y: x | y,
+                     map(lambda elemt: True if seq in list(elemt if isinstance(elemt, range) else [elemt]) else False,
+                         effect_elemts))
 
-            if seq in list(chk_elemt if isinstance(chk_elemt, range) else [chk_elemt]):
-                return True
-
-        return False
+        return ret
