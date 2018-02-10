@@ -14,7 +14,14 @@ class FTOfJudger(unittest.TestCase):
         judger = DispJudger()
         self.assertTrue(judger.is_show(1,'ANY'))
 
-
+    def test_002_step_show_judgement_by_single_seq(self):
+        """
+        GIVEN : single seq of effect range : 1
+        WHEN  : input airplane seq equal effect range : 1
+        THEN  : return judge result true
+        """
+        judger = DispJudger()
+        self.assertTrue(judger.is_show(1,1))
 
 
 if __name__ == '__main__':
