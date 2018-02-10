@@ -62,6 +62,14 @@ class FTOfJudger(unittest.TestCase):
         """
         self.assertFalse(self.judger.is_show(101, [range(1, 101), ]))
 
+    def test_008_step_show_judgement_by_multi_range(self):
+        """
+        GIVEN : multi seq of effect range : range(1,100),range(200-300)
+        WHEN  : input airplane seq in effect range : 201
+        THEN  : return judge result True
+        """
+        self.assertFalse(self.judger.is_show(201, [range(1, 101), range(200, 301)]))
+
 
 if __name__ == '__main__':
     unittest.main()
