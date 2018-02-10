@@ -1,10 +1,6 @@
 import unittest
+from DispJudger import DispJudger
 
-
-class DisplayJudger(object):
-
-    def is_show(self,seq,range):
-        return True
 
 
 class FTOfJudger(unittest.TestCase):
@@ -15,7 +11,7 @@ class FTOfJudger(unittest.TestCase):
         WHEN  : input any airplane seq
         THEN  : return judge result true
         """
-        judger = DisplayJudger()
+        judger = DispJudger()
         self.assertTrue(judger.is_show(1,'ANY'))
 
 
