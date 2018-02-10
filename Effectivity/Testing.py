@@ -24,6 +24,13 @@ class FTOfJudger(unittest.TestCase):
         """
         self.assertTrue(self.judger.is_show(1,1))
 
+    def test_003_set_show_judgement_by_single_seq(self):
+        """
+        GIVEN : single seq of effect range : 1
+        WHEN  : input airplane seq not equal effect range : 2
+        THEN  : return judge result true
+        """
+        self.assertTrue(self.judger.is_show(2,1))
 
 if __name__ == '__main__':
     unittest.main()
