@@ -10,7 +10,7 @@ class FTOfJudger(unittest.TestCase):
         THEN  : return judge result true
         """
         judger = DisplayJudger()
-        self.assertTrue(1,'ANY')
+        self.assertTrue(judger.is_show(1,'ANY'))
 
 
 
